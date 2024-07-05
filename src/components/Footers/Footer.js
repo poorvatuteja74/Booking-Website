@@ -1,64 +1,36 @@
-/*eslint-disable*/
 import React from "react";
-
-// reactstrap components
 import { Container } from "reactstrap";
+import logo from "assets/img/logo.jpg"; // Adjust the path according to your project structure
 
-// core components
+const styles = {
+  footer: {
+    padding: '20px 0',
+    backgroundColor: '#ada397', // Example background color
+  },
+  nav: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  img: {
+    width: '100px',
+    height: '100px',
+  },
+};
 
 function Footer() {
   return (
-    <>
-      <footer className="footer">
-        <Container>
-          <nav>
-            <ul>
-              <li>
-                <a
-                  href="https://www.creative-tim.com?ref=nuk-pro-react-footer"
-                  target="_blank"
-                >
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://presentation.creative-tim.com?ref=nuk-pro-react-footer"
-                  target="_blank"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://blog.creative-tim.com?ref=nuk-pro-react-footer"
-                  target="_blank"
-                >
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div className="copyright" id="copyright">
-            © {new Date().getFullYear()}, Designed by{" "}
-            <a
-              href="https://www.invisionapp.com?ref=creativetim"
-              target="_blank"
-            >
-              Invision
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nuk-pro-react-footer"
-              target="_blank"
-            >
-              Creative Tim
-            </a>
-            .
-          </div>
-        </Container>
-      </footer>
-    </>
+    <footer style={styles.footer}>
+      <Container>
+        <nav style={styles.nav}>
+          <ul>
+            <li>
+              <img src={logo} alt="Logo" style={styles.img} />
+            </li>
+          </ul>
+        </nav>
+      </Container>
+    </footer>
   );
 }
 
